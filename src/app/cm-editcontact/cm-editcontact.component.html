@@ -3,7 +3,7 @@
       Contacts List
     </h4>
     <div class="text-secondary">Click on the Contact to Edit</div>
-    <table id="contactsTable" class="table table-striped">
+    <table id="contactsTable" class="table table-striped" *ngIf="contactsListNew.length">
       <thead>
         <th>First Name</th>
         <th>Last Name</th>
@@ -31,8 +31,11 @@
       </tr>
     </tbody>
   </table>
+  <div class="" *ngIf="!contactsListNew.length">
+      Looks like you have no contacts. Goto <a href="/createcontact" >Create Page</a> for creating new contact.
+  </div>
 </div>
-<div class="form-div container-fluid d-none" style="text-align:center">
+<div class="form-div container-fluid d-none">
     <h4>
       Edit Contact 
     </h4>
@@ -98,7 +101,7 @@
             </select>
           </div>
     
-        <button type="submit" class="btn btn-success" click-once [disabled]="!CmEditcontact.valid" (click)="editContact(); CmEditcontact.reset()">Submit</button>
+        <button type="submit" class="btn btn-success" click-once [disabled]="!CmEditcontact.valid" (click)="editContact(); CmEditcontact.reset();showList()">Submit</button>
     
       </form>
 </div>

@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Contact }   from '../contact';
 import {LOCAL_STORAGE, WebStorageService} from 'angular-webstorage-service';
 import { Router } from '@angular/router';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-cm-createcontact',
@@ -23,5 +24,9 @@ export class CmCreatecontactComponent implements OnInit {
      this.model.status = "Active";
      contactsList.push(this.model);
      this.storage.set('contactsList',contactsList);
+     $(".alert").addClass("show");
+     setTimeout(function(){
+      $(".alert").removeClass("show");
+     },2000);
   }
 }

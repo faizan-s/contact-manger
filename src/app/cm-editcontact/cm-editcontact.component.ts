@@ -20,7 +20,7 @@ export class CmEditcontactComponent implements OnInit {
   constructor(@Inject(LOCAL_STORAGE) private storage: WebStorageService,  private router: Router) { 
     //this.contactsListNew = this.storage.get('contactsList');
   }
-  onSubmit() { this.submitted = true; this.showList() }
+  onSubmit() { this.submitted = true; }
   updateContact(ctx){
     console.log(this.storage.get('contactsList'))
     console.log(ctx);
@@ -47,7 +47,7 @@ export class CmEditcontactComponent implements OnInit {
     setTimeout(function(){
       $(".form-div").addClass("d-none");
       $(".table-div").removeClass("d-none");
-    },0);
+    },500);
   }
   ngOnInit() {
     this.contactsListNew = this.storage.get('contactsList');
