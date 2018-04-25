@@ -13,7 +13,7 @@ export class CmSidebarComponent implements OnInit {
   ngOnInit() {
   }
 
-  onToggle = () => {
+  onToggle = (e) => {
      $('#sidebar').toggleClass('active');
   };
 }
