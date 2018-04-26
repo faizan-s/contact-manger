@@ -14,6 +14,8 @@ import { CmCreatecontactComponent } from './cm-createcontact/cm-createcontact.co
 import * as $ from 'jquery';
 import { CmEditcontactComponent } from './cm-editcontact/cm-editcontact.component';
 import { CmDeletecontactComponent } from './cm-deletecontact/cm-deletecontact.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,7 @@ import { CmDeletecontactComponent } from './cm-deletecontact/cm-deletecontact.co
     AppRoutingModule,
     DataTablesModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule {
