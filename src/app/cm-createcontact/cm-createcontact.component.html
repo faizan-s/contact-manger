@@ -1,18 +1,17 @@
 <div class="container">
   <h1>Create Contact</h1>
   <div class="alert alert-success alert-dismissible fade" role="alert">
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      Contact created successfully!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    Contact created successfully!
   </div>
   <form (ngSubmit)="onSubmit()" #CmCreatecontact="ngForm">
     <div class="form-group">
       <label for="fname">First Name</label>
-      <input type="text" class="form-control" minlength="4"  [(ngModel)]="model.fname" name="fname" id="fname" required  #fname="ngModel">
+      <input type="text" class="form-control" minlength="4" [(ngModel)]="model.fname" name="fname" id="fname" required #fname="ngModel">
     </div>
-    <div *ngIf="fname.invalid && (fname.dirty || fname.touched)"
-        class="alert alert-danger">
+    <div *ngIf="fname.invalid && (fname.dirty || fname.touched)" class="alert alert-danger">
 
       <div *ngIf="fname.errors.required">
         Name is required.
@@ -24,43 +23,41 @@
 
     <div class="form-group">
       <label for="lname">Last Name</label>
-      <input type="text" class="form-control"  [(ngModel)]="model.lname" name="lname" id="lname">
+      <input type="text" class="form-control" [(ngModel)]="model.lname" name="lname" id="lname">
     </div>
 
     <div class="form-group">
       <label for="emailid">E-Mail</label>
-      <input type="email" class="form-control"  [(ngModel)]="model.emailid" name="emailid"  id="emailid" required email="true"  #emailid="ngModel">
+      <input type="email" class="form-control" [(ngModel)]="model.emailid" name="emailid" id="emailid" required email="true" #emailid="ngModel">
     </div>
-    <div *ngIf="emailid.invalid && (emailid.dirty || emailid.touched)"
-    class="alert alert-danger">
+    <div *ngIf="emailid.invalid && (emailid.dirty || emailid.touched)" class="alert alert-danger">
 
       <div *ngIf="emailid.errors.required">
         Email is required.
       </div>
       <div *ngIf="emailid.errors.email">
-          Email is invalid.
+        Email is invalid.
       </div>
     </div>
 
     <div class="form-group">
       <label for="phone">Phone</label>
-      <input type="text" class="form-control" pattern="^[0-9-]{8,15}$" [(ngModel)]="model.phone" name="phone" minlength="8"  maxlength="12" required  id="phone" #phone="ngModel">
+      <input type="text" class="form-control" pattern="^[0-9-]{8,15}$" [(ngModel)]="model.phone" name="phone" minlength="8" maxlength="12" required id="phone" #phone="ngModel">
     </div>
-    <div *ngIf="phone.invalid && (phone.dirty || phone.touched)"
-        class="alert alert-danger">
+    <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="alert alert-danger">
 
       <div *ngIf="phone.errors.required">
         Phone is required.
       </div>
       <div *ngIf="phone.errors.minlength">
-          Phone must be at least 8 characters long.
+        Phone must be at least 8 characters long.
       </div>
       <div *ngIf="phone.errors.pattern">
-          Phone can be only numbers.
-        </div>
+        Phone can be only numbers.
+      </div>
     </div>
 
     <button type="submit" class="btn btn-success" click-once [disabled]="!CmCreatecontact.valid" (click)="newContact(); CmCreatecontact.reset()">Submit</button>
-    
+
   </form>
 </div>

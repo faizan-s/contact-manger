@@ -1,36 +1,36 @@
 <div class="container-fluid" style="text-align:center">
-    <h4>
-      Contacts List
-    </h4>
-    <table id="contactsTable" class="table table-striped" *ngIf="contactsList.length">
-      <thead>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Email Id</th>
-        <th>Phone</th>
-        <th>Status</th>
-      </thead>
-      <tbody>
+  <h4>
+    Contacts List
+  </h4>
+  <table id="contactsTable" class="table table-striped" *ngIf="contactsList.length">
+    <thead>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email Id</th>
+      <th>Phone</th>
+      <th>Status</th>
+    </thead>
+    <tbody>
       <tr *ngFor="let contact of contactsList">
         <td>
-        {{contact.fname}}
+          {{contact.fname}}
         </td>
         <td>
-        {{contact.lname}}
+          {{contact.lname}}
         </td>
         <td>
-        {{contact.emailid}}
+          {{contact.emailid}}
         </td>
         <td>
-        {{contact.phone}}
+          {{contact.phone}}
         </td>
         <td>
-        {{contact.status}}
+          {{contact.status}}
         </td>
       </tr>
     </tbody>
   </table>
   <div class="" *ngIf="!contactsList.length">
-      Looks like you have no contacts. Goto <a href="/#/createcontact" >Create Page</a> for creating new contact.
+    Looks like you have no contacts. Goto <a href="/#/createcontact">Create Page</a> for creating new contact.
   </div>
 </div>
