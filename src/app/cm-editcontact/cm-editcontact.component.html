@@ -3,37 +3,7 @@
     Contacts List
   </h4>
   <div class="text-secondary">Click on the Contact to Edit</div>
-  <table id="contactsTable" class="table table-striped" *ngIf="contactsListNew.length">
-    <thead>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Email Id</th>
-      <th>Phone</th>
-      <th>Status</th>
-    </thead>
-    <tbody>
-      <tr (click)="updateContact(contact)" *ngFor="let contact of contactsListNew">
-        <td>
-          {{contact.fname}}
-        </td>
-        <td>
-          {{contact.lname}}
-        </td>
-        <td>
-          {{contact.emailid}}
-        </td>
-        <td>
-          {{contact.phone}}
-        </td>
-        <td>
-          {{contact.status}}
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="" *ngIf="!contactsListNew.length">
-    Looks like you have no contacts. Goto <a href="/#/createcontact">Create Page</a> for creating new contact.
-  </div>
+  <app-cm-contactstable [contactsList]="contactsListNew" (rowClickEmitter)="updateContact($event)"></app-cm-contactstable>
 </div>
 <div class="form-div container-fluid d-none">
   <h4>

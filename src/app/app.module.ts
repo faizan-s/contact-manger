@@ -12,6 +12,7 @@ import { CmCreatecontactComponent } from './cm-createcontact/cm-createcontact.co
 import { CmEditcontactComponent } from './cm-editcontact/cm-editcontact.component';
 import { CmDeletecontactComponent } from './cm-deletecontact/cm-deletecontact.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { CmContactstableComponent } from './cm-contactstable/cm-contactstable.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     CmListcontactsComponent,
     CmCreatecontactComponent,
     CmEditcontactComponent,
-    CmDeletecontactComponent
+    CmDeletecontactComponent,
+    CmContactstableComponent
   ],
   imports: [
     BrowserModule,

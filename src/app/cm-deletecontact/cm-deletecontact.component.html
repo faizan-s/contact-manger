@@ -3,39 +3,6 @@
     Contacts List
   </h4>
   <div class="text-secondary">Click on the Contact to Delete</div>
-  <table id="contactsTable" class="table table-striped" *ngIf="contactsList.length">
-    <thead>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Email Id</th>
-      <th>Phone</th>
-      <th>Status</th>
-      <th>Action</th>
-    </thead>
-    <tbody>
-      <tr *ngFor="let contact of contactsList">
-        <td>
-          {{contact.fname}}
-        </td>
-        <td>
-          {{contact.lname}}
-        </td>
-        <td>
-          {{contact.emailid}}
-        </td>
-        <td>
-          {{contact.phone}}
-        </td>
-        <td>
-          {{contact.status}}
-        </td>
-        <td>
-          <a href="javascript:void(0)" (click)="deleteContact(contact)">Delete <i class="fa fa-trash-o"></i></a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="" *ngIf="!contactsList.length">
-    Looks like you have no contacts. Goto <a href="/#/createcontact">Create Page</a> for creating new contact.
-  </div>
+  <app-cm-contactstable [contactsList]="contactsList" (actionEmitter)="deleteContact($event)" [showAction]="true"></app-cm-contactstable>
+
 </div>
