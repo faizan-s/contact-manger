@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery';
 
 @Component({
   selector: 'app-cm-sidebar',
@@ -7,13 +6,10 @@ import * as $ from 'jquery';
   styleUrls: ['./cm-sidebar.component.css']
 })
 export class CmSidebarComponent implements OnInit {
-
-  constructor() { }
-
+  togggle = true;
   ngOnInit() {
   }
-
   onToggle = () => {
-    $('#sidebar').toggleClass('active');
+    this.togggle = !this.togggle;
   }
 }

@@ -1,11 +1,11 @@
-<div class="table-div container-fluid" style="text-align:center">
+<div [ngClass]="{'table-div' : true, 'container-fluid' : true, 'd-none' : !hideForm}" style="text-align:center">
   <h4>
     Contacts List
   </h4>
   <div class="text-secondary">Click on the Contact to Edit</div>
   <app-cm-contactstable [contactsList]="contactsListNew" (rowClickEmitter)="updateContact($event)"></app-cm-contactstable>
 </div>
-<div class="form-div container-fluid d-none">
+<div [ngClass]="{'form-div' : true, 'container-fluid' : true, 'd-none' : hideForm}">
   <h4>
     Edit Contact
   </h4>

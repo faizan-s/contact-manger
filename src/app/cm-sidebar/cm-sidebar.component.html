@@ -1,6 +1,6 @@
 <div class="wrapper">
   <!-- Sidebar Holder -->
-  <nav id="sidebar">
+  <nav id="sidebar" [ngClass]="{'active' : togggle}">
     <div class="sidebar-header">
       <div class="navbar-header">
         <button (click)="onToggle()" type="button" id="sidebarCollapse" class="btn btn-default navbar-btn">

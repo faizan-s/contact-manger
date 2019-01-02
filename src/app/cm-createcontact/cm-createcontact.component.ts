@@ -1,7 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { Contact } from '../contact';
 import { LOCAL_STORAGE, WebStorageService } from 'angular-webstorage-service';
-import * as $ from 'jquery';
 
 @Component({
   selector: 'app-cm-createcontact',
@@ -11,6 +10,7 @@ import * as $ from 'jquery';
 export class CmCreatecontactComponent implements OnInit {
   submitted = false;
   model = new Contact();
+  showAlert = false;
   constructor(@Inject(LOCAL_STORAGE) private storage: WebStorageService) { }
   ngOnInit() {
   }
@@ -22,9 +22,9 @@ export class CmCreatecontactComponent implements OnInit {
     this.model.status = 'Active';
     contactsList.push(this.model);
     this.storage.set('contactsList', contactsList);
-    $('.alert').addClass('show');
-    setTimeout(function() {
-      $('.alert').removeClass('show');
+    this.showAlert = true;
+    setTimeout(() => {
+      this.showAlert = false;
     }, 2000);
   }
 }

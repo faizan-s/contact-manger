@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
 @Component({
   selector: 'app-cm-contactstable',
   templateUrl: './cm-contactstable.component.html',
@@ -11,8 +10,8 @@ export class CmContactstableComponent implements OnInit {
   @Output() rowClickEmitter = null;
   @Output() actionEmitter = null;
   constructor() {
-    this.rowClickEmitter =  new EventEmitter<object>();
-    this.actionEmitter =  new EventEmitter<object>();
+    this.rowClickEmitter = new EventEmitter<object>();
+    this.actionEmitter = new EventEmitter<object>();
   }
 
   ngOnInit() {

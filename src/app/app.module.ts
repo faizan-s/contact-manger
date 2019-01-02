@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { StorageServiceModule } from 'angular-webstorage-service';
-import { DataTablesModule } from 'angular-datatables';
 import { AppComponent } from './app.component';
 import { CmSidebarComponent } from './cm-sidebar/cm-sidebar.component';
 import { CmContainerComponent } from './cm-container/cm-container.component';
@@ -29,8 +28,7 @@ import { CmContactstableComponent } from './cm-contactstable/cm-contactstable.co
     BrowserModule,
     FormsModule,
     StorageServiceModule,
-    AppRoutingModule,
-    DataTablesModule
+    AppRoutingModule
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
