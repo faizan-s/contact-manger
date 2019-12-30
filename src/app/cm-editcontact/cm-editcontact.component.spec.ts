@@ -8,9 +8,9 @@ describe('CmEditcontactComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CmEditcontactComponent ]
+      declarations: [CmEditcontactComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

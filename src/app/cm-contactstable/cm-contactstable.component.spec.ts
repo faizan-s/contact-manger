@@ -8,9 +8,9 @@ describe('CmContactstableComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CmContactstableComponent ]
+      declarations: [CmContactstableComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

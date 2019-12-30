@@ -1,5 +1,6 @@
-import { Component, Inject } from '@angular/core';
 import { LOCAL_STORAGE, WebStorageService } from 'angular-webstorage-service';
+
+import { Component, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-root',

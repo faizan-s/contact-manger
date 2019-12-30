@@ -1,5 +1,7 @@
-import { Component, OnInit, Inject } from '@angular/core';
 import { LOCAL_STORAGE, WebStorageService } from 'angular-webstorage-service';
+
+import { Component, Inject, OnInit } from '@angular/core';
+
 @Component({
   selector: 'app-cm-deletecontact',
   templateUrl: './cm-deletecontact.component.html',

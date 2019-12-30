@@ -3,7 +3,8 @@
     Contacts List
   </h4>
   <div class="text-secondary">Click on the Contact to Edit</div>
-  <app-cm-contactstable [contactsList]="contactsListNew" (rowClickEmitter)="updateContact($event)"></app-cm-contactstable>
+  <app-cm-contactstable [contactsList]="contactsListNew" (rowClickEmitter)="updateContact($event)">
+  </app-cm-contactstable>
 </div>
 <div [ngClass]="{'form-div' : true, 'container-fluid' : true, 'd-none' : hideForm}">
   <h4>
@@ -12,7 +13,8 @@
   <form (ngSubmit)="onSubmit()" #CmEditcontact="ngForm">
     <div class="form-group">
       <label for="fname">First Name</label>
-      <input type="text" class="form-control" minlength="4" [(ngModel)]="model.fname" name="fname" id="fname" required #fname="ngModel">
+      <input type="text" class="form-control" minlength="4" [(ngModel)]="model.fname" name="fname" id="fname" required
+        #fname="ngModel">
     </div>
     <div *ngIf="fname.invalid && (fname.dirty || fname.touched)" class="alert alert-danger">
 
@@ -31,7 +33,8 @@
 
     <div class="form-group">
       <label for="emailid">E-Mail</label>
-      <input type="email" class="form-control" [(ngModel)]="model.emailid" name="emailid" id="emailid" required email="true" #emailid="ngModel">
+      <input type="email" class="form-control" [(ngModel)]="model.emailid" name="emailid" id="emailid" required
+        email="true" #emailid="ngModel">
     </div>
     <div *ngIf="emailid.invalid && (emailid.dirty || emailid.touched)" class="alert alert-danger">
 
@@ -45,7 +48,8 @@
 
     <div class="form-group">
       <label for="phone">Phone</label>
-      <input type="text" class="form-control" pattern="^[0-9-]{8,15}$" [(ngModel)]="model.phone" name="phone" minlength="8" maxlength="12" required id="phone" #phone="ngModel">
+      <input type="text" class="form-control" pattern="^[0-9-]{8,15}$" [(ngModel)]="model.phone" name="phone"
+        minlength="8" maxlength="12" required id="phone" #phone="ngModel">
     </div>
     <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="alert alert-danger">
 
@@ -68,7 +72,8 @@
       </select>
     </div>
 
-    <button type="submit" class="btn btn-success" click-once [disabled]="!CmEditcontact.valid" (click)="editContact(); CmEditcontact.reset();showList()">Submit</button>
+    <button type="submit" class="btn btn-success" click-once [disabled]="!CmEditcontact.valid"
+      (click)="editContact(); CmEditcontact.reset();showList()">Submit</button>
 
   </form>
 </div>

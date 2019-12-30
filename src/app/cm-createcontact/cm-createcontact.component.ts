@@ -1,6 +1,8 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { Contact } from '../contact';
 import { LOCAL_STORAGE, WebStorageService } from 'angular-webstorage-service';
+
+import { Component, Inject, OnInit } from '@angular/core';
+
+import { Contact } from '../contact';
 
 @Component({
   selector: 'app-cm-createcontact',

@@ -8,9 +8,9 @@ describe('CmSidebarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CmSidebarComponent ]
+      declarations: [CmSidebarComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
