@@ -15,7 +15,6 @@ export class CmEditcontactComponent implements OnInit {
   hideForm = true;
   model = new Contact();
   constructor(@Inject(LOCAL_STORAGE) private storage: WebStorageService) {
-    // this.contactsListNew = this.storage.get('contactsList');
   }
   onSubmit() { this.submitted = true; }
   updateContact(ctx) {
